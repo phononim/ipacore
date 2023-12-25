@@ -28,174 +28,174 @@
 
 type
   IPALetter* = enum
-    VlsBlbStp = 101, ## Voiceless bilibial Stop
-    VcdBlbStp = 102, ## Voiced bilibial Stop
-    VlsAlvStp = 103, ## Voiceless alveolar Stop
-    VcdAlvStp = 104, ## Voiced alveolar Stop
-    VlsRfxStp = 105, ## Voiceless retroflex Stop
-    VcdRfxStp = 106, ## Voiced retroflex Stop
-    VlsPalStp = 107, ## Voiceless palatal Stop
-    VcdPalStp = 108, ## Voiced palatal Stop
-    VlsVelStp = 109, ## Voiceless velar Stop
-    VcdVelStp = 110, ## Voiced velar Stop
-    VlsUvlStp = 111, ## Voiceless uvular Stop
-    VcdUvlStp = 112, ## Voiced uvular Stop
-    GltStp = 113, ## Glottal Stop
-    VcdBlbNas = 114, ## Voiced bilabial nasal
-    VcdLbdNas = 115, ## Voiced labiodental nasal
-    VcdAlvNas = 116, ## Voiced alveolar nasal
-    VcdRfxNas = 117, ## Voiced retroflex nasal
-    VcdPalNas = 118, ## Voiced palatal nasal
-    VcdVelNas = 119, ## Voiced velar nasal
-    VcdUvlNas = 120, ## Voiced uvular nasal
-    VcdBlbTrl = 121, ## Voiced bilabial trill
-    VcdAlvTrl = 122, ## Voiced alveolar trill
-    VcdUvlTrl = 123, ## Voiced uvular trill
-    VcdAlvTap = 124, ## Voiced alveolar tap
-    VcdRfxTap = 125, ## Voiced retroflex tap
-    VlsBlbFrc = 126, ## Voiceless bilabial fricative
-    VcdBlbFrc = 127, ## Voiced bilabial fricative
-    VlsLbdFrc = 128, ## Voiceless labiodental fricative
-    VcdLbdFrc = 129, ## Voiced labiodental fricative
-    VlsDntFrc = 130, ## Voiceless dental fricative
-    VcdDntFrc = 131, ## Voiced dental fricative
-    VlsAlvFrc = 132, ## Voiceless alveolar fricative
-    VcdAlvFrc = 133, ## Voiced alveolar fricative
-    VlsPlvFrc = 134, ## Voiceless postalveolar fricative
-    VcdPlvFrc = 135, ## Voiced postalveolar fricative
-    VlsRfxFrc = 136, ## Voiceless retroflex fricative
-    VcdRfxFrc = 137, ## Voiced retroflex fricative
-    VlsPalFrc = 138, ## Voiceless palatal fricative
-    VcdPalFrc = 139, ## Voiced palatal fricative
-    VlsVelFrc = 140, ## Voiceless velar fricative
-    VcdVelFrc = 141, ## Voiced velar fricative
-    VlsUvlFrc = 142, ## Voiceless uvular fricative
-    VcdUvlFrc = 143, ## Voiced uvular fricative
-    VlsPhrFrc = 144, ## Voiceless pharyngeal fricative 
-    VcdPhrFrc = 145, ## Voiced pharyngeal fricative 
-    VlsGltFrc = 146, ## Voiceless glottal fricative
-    VcdGltFrc = 147, ## Voiced glottal fricative
-    VlsAlvLatFrc = 148, ## Voiceless alveolar lateral fricative
-    VcdAlvLatFrc = 149, ## Voiced alveolar lateral fricative
-    VcdLbdApr = 150, ## Voiced labiodental approximant
-    VcdAlvApr = 151, ## Voiced alveolar approximant
-    VcdRfxApr = 152, ## Voiced retroflex approximant
-    VcdPalApr = 153, ## Voiced palatal approximant
-    VcdVelApr = 154, ## Voiced velar approximant
-    VcdAlvLatApr = 155, ## Voiced alveolar lateral approximant
-    VcdRfxLatApr = 156, ## Voiced retroflex lateral approximant
-    VcdPalLatApr = 157, ## Voiced palatal lateral approximant
-    VcdVelLatApr = 158, ## Voiced velar lateral approximant
-    VcdBlbImp = 160, ## Voiced bilibial implosive
-    VcdAlvImp = 162, ## Voiced alveolar implosive
-    VcdPalImp = 164, ## Voiced palatal implosive
-    VcdVelImp = 166, ## Voiced velar implosive
-    VcdUvlImp = 168, ## Voiced uvular implosive
-    VlsLbvFrc = 169, ## Voiceless labial-velar fricative
-    VcdLbvApr = 170, ## Voiced labial-velar approximant
-    VcdLbpApr = 171, ## Voiced labial-palatal approximant
-    VlsEpgTrl = 172, ## Voiceless epiglottal trill
-    EpgStp = 173, ## Epiglottal Stop
-    VcdEpgTrl = 174, ## Voiced epiglottal trill
-    VlsPalVelFrc = 175, ## Sj-sound (Voiceless palatal-velar fricative)
-    BlbClk = 176, ## Bilabial click
-    DntClk = 177, ## Dental click
-    AlvClk = 178, ## Alveolar click
-    PalClk = 179, ## Palatal click
-    AlvLatClk = 180, ## Alveolar lateral click
-    VcdAlvLatFlp = 181, ## Voiced alveolar lateral flap
-    VlsAlpFrc = 182, ## Voiceless alveolo-palatal fricative
-    VcdAlpFrc = 183, ## Voiced alveolo-palatal fricative
-    VcdLbdFlp = 184, ## Voiced labiodental flap
-    VzdAlvLatApr = 209, ## Velarized alveolar lateral approximant
-    ClsFntUnrVwl = 301, ## Close front unrounded vowel
-    ClsMidUnrVwl = 302, ## Close-mid front unrounded vowel
-    OpnMidFntUnrVwl = 303, ## Open-mid front unrounded vowel
-    OpnFntUnrVwl = 304, ## Open front unrounded vowel
-    OpnBckUnrVwl = 305, ## Open back unrounded vowel
-    OpnMidBckRndVwl = 306, ## Open-mid back rounded vowel
-    ClsMidBckRndVwl = 307, ## Close-mid back rounded vowel
-    ClsBckRndVwl = 308, ## Close back rounded vowel
-    ClsFntRndVwl = 309, ## Close front rounded vowel
-    ClsMidFntRndVwl = 310, ## Close-mid front rounded vowel
-    OpnMidFntRndVwl = 311, ## Open-mid front rounded vowel
-    OpnFntRndVwl = 312, ## Open front rounded vowel
-    OpnBckRndVwl = 313, ## Open back rounded vowel
-    OpnMidBckUnrVwl = 314, ## Open-mid back unrounded vowel
-    ClsMidBckUnrVwl = 315, ## Close-mid back unrounded vowel
-    ClsBckUnrVwl = 316, ## Close back unrounded vowel
-    ClsCntUnrVwl = 317, ## Close central unrounded vowel
-    ClsCntRndVwl = 318, ## Close central rounded vowel
-    NerClsNerFntUnrVwl = 319, ## Near-close near-front unrounded vowel
-    NerClsNerFntRndVwl = 320, ## Near-close near-front rounded vowel
-    NerClsNerBckRndVwl = 321, ## Near-close near-back rounded vowel
-    MidCntVwl = 322, ## Mid central vowel
-    ClsMidCntRndVwl = 323, ## Close-mid central rounded vowel
-    NerOpnCntVwl = 324, ## Near-open central vowel
-    NerOpnFntUnrVwl = 325, ## Near-open front unrounded vowel
-    OpnMidCntUnrVwl = 326, ## Open-mid central unrounded vowel
-    RzdMidCntVwl = 327, ## R-coloured mid central vowel
-    OpnMidCntRndVwl = 395, ## Open-mid central rounded vowel
-    ClsMidCntUnrVwl = 397, ## Close-mid central unrounded vowel
-    Ejc = 401, ## Ejective
-    VlsA = 402, ## Voiceless (First type, 402A)
-    Vcd = 403, ## Voiced
-    Asp = 404, ## Aspirated
-    MrmVcd = 405, ## Breathy voiced (Murmured voiced)
-    CrkVcd = 406, ## Creaky voiced
-    Lgu = 407, ## Linguolabial
-    Dnt = 408, ## Dental
-    Apc = 409, ## Apical
-    Lmn = 410, ## Laminal
-    MorRnd = 411, ## More rounded
-    LssRnd = 412, ## Less rounded
-    Adv = 413, ## Advanced
-    Rtc = 414, ## Retracted
-    Cnt = 415, ## Centralized
-    MidCnt = 416, ## Mid-centralized
-    AdvTngRot = 417, ## Advanced tongue root
-    RtcTngRot = 418, ## Retracted tongue root
-    Rzd = 419, ## Rhoticity
-    Lzd = 420, ## Labialized
-    Pzd = 421, ## Palatalized
-    Vzd = 422, ## Velarized
-    Fzd = 423, ## Pharyngealized
-    Nzd = 424, ## Nasalized
-    NasRls = 425, ## Nasal release
-    LatRls = 426, ## Lateral release
-    NadRls = 427, ## No audible release
-    VzdFzd = 428, ## Velarized or pharyngealized
-    Rsd = 429, ## Raised
-    Lwd = 430, ## Lowered
-    Syl = 431, ## Syllabic
-    NonSyl = 432, ## Non-syllabic
-    AfrDblArt = 433, ## Affricate or double articulation
-    VlsB = 434, ## Voiceless (Second type, real number is 402B but due to technical limitations, 434 is used.)
-    PrmStr = 501, ## Primary stress
-    ScnStr = 502, ## Secondary stress
-    Lng = 503, ## Long
-    HlfLng = 504, ## Half-long
-    ExtSht = 505, ## Extra-short
-    SylBrk = 506, ## Syllable break
-    MnrGrp = 507, ## Minor (foot) group
-    MjrGrp = 508, ## Major (intonation) group
-    Lnk = 509, ## Linking (absence of a break)
-    GlbRse = 510, ## Global rise
-    GlbFal = 511, ## Global fall
-    ExtHgh = 512, ## Extra-high
-    Hgh = 513, ## High
-    Mid = 514, ## Mid
-    Low = 515, ## Low
-    ExtLow = 516, ## Extra-low
-    Ups = 517, ## Upstep
-    Dsp = 518, ## Downstep
-    ExtHghB = 519, ## Extra-high
-    HghB = 520, ## High
-    MidB = 521, ## Mid
-    LowB = 522, ## Low
-    ExtLowB = 523, ## Extra-low
-    Rse = 524, ## Rising
-    Fal = 525, ## Falling
-    HghRse = 526, ## High-rising
-    LowRse = 527, ## Low-rising
-    RseFal = 528, ## Rising-falling
+    VlsBlbStp, ## Voiceless bilibial Stop
+    VcdBlbStp, ## Voiced bilibial Stop
+    VlsAlvStp, ## Voiceless alveolar Stop
+    VcdAlvStp, ## Voiced alveolar Stop
+    VlsRfxStp, ## Voiceless retroflex Stop
+    VcdRfxStp, ## Voiced retroflex Stop
+    VlsPalStp, ## Voiceless palatal Stop
+    VcdPalStp, ## Voiced palatal Stop
+    VlsVelStp, ## Voiceless velar Stop
+    VcdVelStp, ## Voiced velar Stop
+    VlsUvlStp, ## Voiceless uvular Stop
+    VcdUvlStp, ## Voiced uvular Stop
+    GltStp, ## Glottal Stop
+    VcdBlbNas, ## Voiced bilabial nasal
+    VcdLbdNas, ## Voiced labiodental nasal
+    VcdAlvNas, ## Voiced alveolar nasal
+    VcdRfxNas, ## Voiced retroflex nasal
+    VcdPalNas, ## Voiced palatal nasal
+    VcdVelNas, ## Voiced velar nasal
+    VcdUvlNas, ## Voiced uvular nasal
+    VcdBlbTrl, ## Voiced bilabial trill
+    VcdAlvTrl, ## Voiced alveolar trill
+    VcdUvlTrl, ## Voiced uvular trill
+    VcdAlvTap, ## Voiced alveolar tap
+    VcdRfxTap, ## Voiced retroflex tap
+    VlsBlbFrc, ## Voiceless bilabial fricative
+    VcdBlbFrc, ## Voiced bilabial fricative
+    VlsLbdFrc, ## Voiceless labiodental fricative
+    VcdLbdFrc, ## Voiced labiodental fricative
+    VlsDntFrc, ## Voiceless dental fricative
+    VcdDntFrc, ## Voiced dental fricative
+    VlsAlvFrc, ## Voiceless alveolar fricative
+    VcdAlvFrc, ## Voiced alveolar fricative
+    VlsPlvFrc, ## Voiceless postalveolar fricative
+    VcdPlvFrc, ## Voiced postalveolar fricative
+    VlsRfxFrc, ## Voiceless retroflex fricative
+    VcdRfxFrc, ## Voiced retroflex fricative
+    VlsPalFrc, ## Voiceless palatal fricative
+    VcdPalFrc, ## Voiced palatal fricative
+    VlsVelFrc, ## Voiceless velar fricative
+    VcdVelFrc, ## Voiced velar fricative
+    VlsUvlFrc, ## Voiceless uvular fricative
+    VcdUvlFrc, ## Voiced uvular fricative
+    VlsPhrFrc, ## Voiceless pharyngeal fricative 
+    VcdPhrFrc, ## Voiced pharyngeal fricative 
+    VlsGltFrc, ## Voiceless glottal fricative
+    VcdGltFrc, ## Voiced glottal fricative
+    VlsAlvLatFrc, ## Voiceless alveolar lateral fricative
+    VcdAlvLatFrc, ## Voiced alveolar lateral fricative
+    VcdLbdApr, ## Voiced labiodental approximant
+    VcdAlvApr, ## Voiced alveolar approximant
+    VcdRfxApr, ## Voiced retroflex approximant
+    VcdPalApr, ## Voiced palatal approximant
+    VcdVelApr, ## Voiced velar approximant
+    VcdAlvLatApr, ## Voiced alveolar lateral approximant
+    VcdRfxLatApr, ## Voiced retroflex lateral approximant
+    VcdPalLatApr, ## Voiced palatal lateral approximant
+    VcdVelLatApr, ## Voiced velar lateral approximant
+    VcdBlbImp, ## Voiced bilibial implosive
+    VcdAlvImp, ## Voiced alveolar implosive
+    VcdPalImp, ## Voiced palatal implosive
+    VcdVelImp, ## Voiced velar implosive
+    VcdUvlImp, ## Voiced uvular implosive
+    VlsLbvFrc, ## Voiceless labial-velar fricative
+    VcdLbvApr, ## Voiced labial-velar approximant
+    VcdLbpApr, ## Voiced labial-palatal approximant
+    VlsEpgTrl, ## Voiceless epiglottal trill
+    EpgStp, ## Epiglottal Stop
+    VcdEpgTrl, ## Voiced epiglottal trill
+    VlsPalVelFrc, ## Sj-sound (Voiceless palatal-velar fricative)
+    BlbClk, ## Bilabial click
+    DntClk, ## Dental click
+    AlvClk, ## Alveolar click
+    PalClk, ## Palatal click
+    AlvLatClk, ## Alveolar lateral click
+    VcdAlvLatFlp, ## Voiced alveolar lateral flap
+    VlsAlpFrc, ## Voiceless alveolo-palatal fricative
+    VcdAlpFrc, ## Voiced alveolo-palatal fricative
+    VcdLbdFlp, ## Voiced labiodental flap
+    VzdAlvLatApr, ## Velarized alveolar lateral approximant
+    ClsFntUnrVwl, ## Close front unrounded vowel
+    ClsMidUnrVwl, ## Close-mid front unrounded vowel
+    OpnMidFntUnrVwl, ## Open-mid front unrounded vowel
+    OpnFntUnrVwl, ## Open front unrounded vowel
+    OpnBckUnrVwl, ## Open back unrounded vowel
+    OpnMidBckRndVwl, ## Open-mid back rounded vowel
+    ClsMidBckRndVwl, ## Close-mid back rounded vowel
+    ClsBckRndVwl, ## Close back rounded vowel
+    ClsFntRndVwl, ## Close front rounded vowel
+    ClsMidFntRndVwl, ## Close-mid front rounded vowel
+    OpnMidFntRndVwl, ## Open-mid front rounded vowel
+    OpnFntRndVwl, ## Open front rounded vowel
+    OpnBckRndVwl, ## Open back rounded vowel
+    OpnMidBckUnrVwl, ## Open-mid back unrounded vowel
+    ClsMidBckUnrVwl, ## Close-mid back unrounded vowel
+    ClsBckUnrVwl, ## Close back unrounded vowel
+    ClsCntUnrVwl, ## Close central unrounded vowel
+    ClsCntRndVwl, ## Close central rounded vowel
+    NerClsNerFntUnrVwl, ## Near-close near-front unrounded vowel
+    NerClsNerFntRndVwl, ## Near-close near-front rounded vowel
+    NerClsNerBckRndVwl, ## Near-close near-back rounded vowel
+    MidCntVwl, ## Mid central vowel
+    ClsMidCntRndVwl, ## Close-mid central rounded vowel
+    NerOpnCntVwl, ## Near-open central vowel
+    NerOpnFntUnrVwl, ## Near-open front unrounded vowel
+    OpnMidCntUnrVwl, ## Open-mid central unrounded vowel
+    RzdMidCntVwl, ## R-coloured mid central vowel
+    OpnMidCntRndVwl, ## Open-mid central rounded vowel
+    ClsMidCntUnrVwl, ## Close-mid central unrounded vowel
+    Ejc, ## Ejective
+    VlsA, ## Voiceless (First type, 402A)
+    Vcd, ## Voiced
+    Asp, ## Aspirated
+    MrmVcd, ## Breathy voiced (Murmured voiced)
+    CrkVcd, ## Creaky voiced
+    Lgu, ## Linguolabial
+    Dnt, ## Dental
+    Apc, ## Apical
+    Lmn, ## Laminal
+    MorRnd, ## More rounded
+    LssRnd, ## Less rounded
+    Adv, ## Advanced
+    Rtc, ## Retracted
+    Cnt, ## Centralized
+    MidCnt, ## Mid-centralized
+    AdvTngRot, ## Advanced tongue root
+    RtcTngRot, ## Retracted tongue root
+    Rzd, ## Rhoticity
+    Lzd, ## Labialized
+    Pzd, ## Palatalized
+    Vzd, ## Velarized
+    Fzd, ## Pharyngealized
+    Nzd, ## Nasalized
+    NasRls, ## Nasal release
+    LatRls, ## Lateral release
+    NadRls, ## No audible release
+    VzdFzd, ## Velarized or pharyngealized
+    Rsd, ## Raised
+    Lwd, ## Lowered
+    Syl, ## Syllabic
+    NonSyl, ## Non-syllabic
+    AfrDblArt, ## Affricate or double articulation
+    VlsB, ## Voiceless (Second type, real number is 402B but due to technical limitations, 434 is used.)
+    PrmStr, ## Primary stress
+    ScnStr, ## Secondary stress
+    Lng, ## Long
+    HlfLng, ## Half-long
+    ExtSht, ## Extra-short
+    SylBrk, ## Syllable break
+    MnrGrp, ## Minor (foot) group
+    MjrGrp, ## Major (intonation) group
+    Lnk, ## Linking (absence of a break)
+    GlbRse, ## Global rise
+    GlbFal, ## Global fall
+    ExtHgh, ## Extra-high
+    Hgh, ## High
+    Mid, ## Mid
+    Low, ## Low
+    ExtLow, ## Extra-low
+    Ups, ## Upstep
+    Dsp, ## Downstep
+    ExtHghB, ## Extra-high
+    HghB, ## High
+    MidB, ## Mid
+    LowB, ## Low
+    ExtLowB, ## Extra-low
+    Rse, ## Rising
+    Fal, ## Falling
+    HghRse, ## High-rising
+    LowRse, ## Low-rising
+    RseFal, ## Rising-falling
