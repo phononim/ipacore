@@ -1,27 +1,30 @@
+# Copyright (c) systemonia 2023 <systemonia@proton.me>
+# Licensed under the BSD-3-Clause license.
 
-# For the sake of reducing typing time, I will be shortening the names according to https://www.alt-usage-english.org/IPA/ascii-ipa.pdf
-# Except for a couple of differences:
-# Stp (Stop) is used instead of Plosive
-# Tap is used instead of flp (Flap) (For specific letters!)
-# Plv (Postalveolar) is used instead of pla (Palato-alveolar) 
-# Lbp (Labial-palatal) is used. (Instead of rnd, or other abbreviations.)
-# Epg (Epiglottal) is used. (The original article does not have this feature abbreviation.)
-# Alp (Alveolo-palatal) is used. (The original article does not have this feature abbreviation.)
-# Cls (Closed) is used. (The original article uses hgh (High))
-
-# New invented abbreviations:
-# Opn (Open), Ner (Near), Crk (Creaky), 
-# Lgu (Linguolabial), Apc (Apical), Lmn (Laminal), 
-# Mor (More), Lss (Less), Adv (Advanced), 
-# Rtc (Retracted), Tng (Tongue), Rot (Root), 
-# Rls (Release), Nad (No audible), Rsd (Raised), 
-# Lwd (Lowered), Afr (Affricated), Dbl (Double), 
-# Art (Articulation), Prm (Primary), Scn (Secondary), 
-# Str (Stress), Hlf (Half), Ext (Extra),
-# Brk (Break), Mnr (Minor), Mjr (Major),
-# Grp (Group), Lnk (Linking), Glb (Global),
-# Rse (Rise), Fal (Fall), Ups (Upstep)
-# Dsp (Downstep)
+## This module provides the actual type definitions. The useful bits.
+## Individual IPA letters are provided by an enum, containing a whole load of IPA symbols.
+## if their names seem cryptic then thats because I used a sepcial naming system.
+## which abbreviates their features into three characters. https://www.alt-usage-english.org/IPA/ascii-ipa.pdf
+## 
+## Unfortunately that document lacks a lot of new terms, and I have decided thus to use the following new terms:
+## Opn (Open), Ner (Near), Crk (Creaky), 
+## Lgu (Linguolabial), Apc (Apical), Lmn (Laminal), 
+## Mor (More), Lss (Less), Adv (Advanced), 
+## Rtc (Retracted), Tng (Tongue), Rot (Root), 
+## Rls (Release), Nad (No audible), Rsd (Raised), 
+## Lwd (Lowered), Afr (Affricated), Dbl (Double), 
+## Art (Articulation), Prm (Primary), Scn (Secondary), 
+## Str (Stress), Hlf (Half), Ext (Extra),
+## Brk (Break), Mnr (Minor), Mjr (Major),
+## Grp (Group), Lnk (Linking), Glb (Global),
+## Rse (Rise), Fal (Fall), Ups (Upstep)
+## Dsp (Downstep), Epg (Epiglottal), Alp (Alveolo-palatal)
+##
+## And some terms are not the same one-to-one in that document:
+## * Tap is used instead of flp (Flap) (For specific letters!)
+## * Plv (Postalveolar) is used instead of pla (Palato-alveolar) 
+## * Lbp (Labial-palatal) is used. (Instead of rnd, or other abbreviations.)
+## * Cls (Closed) is used. (The original article uses hgh (High) or some other abbreviations)
 
 type
   IPALetter* = enum
